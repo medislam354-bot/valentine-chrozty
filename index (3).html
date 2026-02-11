@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Chrozty ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        h1 { margin-top: 50px; font-size: 50px; }
+        p { font-size: 22px; width: 70%; margin: auto; margin-top: 20px; }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff4b6e;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        button:hover { background: #ffe6eb; }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall { 0% { top: -10px; } 100% { top: 100vh; } }
+        img { margin-top: 20px; border-radius: 15px; max-width: 250px; }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Valentine's Day ❤️ Chrozty</h1>
+    <p>
+        Chrozty, you are the most amazing part of my life 💖<br>
+        Every moment with you feels magical and full of love 🌟
+    </p>
+
+    <!-- Your photos -->
+    <img src="photo1.jpg" alt="Chrozty" />
+    <img src="photo2.jpg" alt="Chrozty" />
+
+    <button onclick="surprise()">Click for a Surprise 💌</button>
+
+    <!-- Song -->
+    <audio id="song" src="song.mp3" autoplay loop></audio>
+
+    <script>
+        function surprise() {
+            alert("Chrozty, I love you more than anything ❤️");
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
